@@ -7,8 +7,8 @@ interface YourStackProps {
   onClearAll: () => void;
 }
 
-// props type is  not declare
-export default function YourStack({ selectedTechs, onRemove,onClearAll,}) {
+// props type is declared
+export default function YourStack({ selectedTechs, onRemove,onClearAll,}: YourStackProps) {
   return (
     <div className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm sticky bottom-6">
       <div className="mb-4"><h3 className="text-lg font-bold text-slate-900">Your Stack</h3>

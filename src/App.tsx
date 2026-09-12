@@ -6,10 +6,11 @@ import Footer from "./components/Footer";
 import { type Technology } from "./components/TechCard";
 import LoadingTechnology from "./components/LoadingTechnology";
 
+//data fetching change ‍and delete (// if (!res.ok) {throw new Error("Failed to fetch data");})
 const fetchTechnologies = async (): Promise<Technology[]> => {
   const res = await fetch("/data.json");
-  if (!res.ok) {throw new Error("Failed to fetch data");}
-  return res.json();
+  const data = await res.json();
+  return data;
 };
 
 const techPromise = fetchTechnologies();
