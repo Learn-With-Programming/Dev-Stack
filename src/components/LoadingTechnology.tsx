@@ -12,8 +12,9 @@ const LoadingTechnology = () => {
   );
 };
 
+//loading Technology code Update wth techItems
 export default function LoadingData() {
-  const techItems = [1, 2, 3, 4, 5, 6];
+  const techItems = ['techItems-1', 'techItems-2', 'techItems-3', 'techItems-4', 'techItems-5', 'techItems-6'];
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {techItems.map((item) => (<LoadingTechnology key={item} />))}
