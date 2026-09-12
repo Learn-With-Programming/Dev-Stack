@@ -7,11 +7,8 @@ interface YourStackProps {
   onClearAll: () => void;
 }
 
-export default function YourStack({
-  selectedTechs,
-  onRemove,
-  onClearAll,
-}: YourStackProps) {
+// props type is  not declare
+export default function YourStack({ selectedTechs, onRemove,onClearAll,}) {
   return (
     <div className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm sticky bottom-6">
       <div className="mb-4"><h3 className="text-lg font-bold text-slate-900">Your Stack</h3>
@@ -41,8 +38,7 @@ export default function YourStack({
       </div>
       {selectedTechs.length > 0 && (
         <button onClick={onClearAll} 
-        className="w-full py-2.5 border border-red-200 text-red-500 hover:bg-red-50 font-medium text-sm rounded-xl transition-colors">
-          Remove All
+        className="w-full py-2.5 border border-red-200 text-red-500 hover:bg-red-50 font-medium text-sm rounded-xl transition-colors">Remove All
         </button>
       )}
     </div>
