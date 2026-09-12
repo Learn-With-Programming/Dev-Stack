@@ -30,13 +30,13 @@ export default function TechCard({ tech, isAdded, onToggle }: TechCardProps) {
         <h3 className="text-lg font-bold text-gray-900 mb-1">{tech.name}</h3>
         <p className="text-xs text-gray-500 line-clamp-2 leading-relaxed mb-4">{tech.description}</p>
       </div>
-
+      
         {/* tech category star icon change */}
       <div>
         <div className="flex items-center justify-between text-xs text-gray-400 mb-4 border-t border-gray-50 pt-3">
           <span className="font-medium text-gray-600">{tech.category}</span>
           <span className="bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{tech.level}</span>
-          <span className="text-amber-500 font-semibold flex items-center gap-1">⭐{tech.rating.toFixed(1)}</span>
+          <span className="text-amber-500 font-semibold flex items-center gap-1"><FaStar />{tech.rating.toFixed(1)}</span>
         </div>
 
         <button type="button" onClick={() => onToggle(tech)} className={`btn btn-sm w-full normal-case font-medium rounded-lg transition-colors 
